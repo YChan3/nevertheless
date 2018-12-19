@@ -11,7 +11,7 @@ int main() {
   while(1){
     printf("%s\n", "What is the input");
     fgets(input, BUFFER_SIZE, stdin);
-    strtok(input, "\n")
+    strtok(input, "\n");
     write(input, to_server, BUFFER_SIZE);
   }
 }

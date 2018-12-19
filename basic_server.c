@@ -9,7 +9,7 @@ int main() {
 
   from_client = server_handshake( &to_client );
   while(1){
-    read(input, from_client, BUFFER_SIZE)
+    read(input, from_client, BUFFER_SIZE);
     printf("%s\n", input);
   }
 }
