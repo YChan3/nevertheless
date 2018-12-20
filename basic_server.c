@@ -9,12 +9,11 @@ static void sighandler(int signo){
 }
 
 int main() {
+  signal(SIGINT,sighandler);
 
   int to_client;
   int from_client;
   char input[BUFFER_SIZE];
-
-  signal(SIGINT,sighandler);
 
   while(1){
     if(read(from_client, input, BUFFER_SIZE)){
