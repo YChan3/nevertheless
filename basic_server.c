@@ -14,6 +14,7 @@ int main() {
     }
     else{
       from_client = server_handshake( &to_client );
+      remove("WKP");
     }
   }
 }
