@@ -15,6 +15,8 @@ int main() {
   int from_client;
   char input[BUFFER_SIZE];
 
+  from_client = server_handshake( &to_client );
+  
   while(1){
     if(read(from_client, input, BUFFER_SIZE)){
       printf("your input was %ld characters.\n", strlen(input));
