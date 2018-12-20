@@ -9,8 +9,11 @@ int main() {
 
   from_client = server_handshake( &to_client );
   while(1){
-    if(read(from_client, input, BUFFER_SIZE) != -1){
-      printf("%ld\n", strlen(input));
+    int words = read(from_client, input, BUFFER_SIZE);
+    print words;
+    if(words != -1){
+      wait(2);
+      printf("your input was %ld characters.\n", strlen(input));
     }
   }
 }
